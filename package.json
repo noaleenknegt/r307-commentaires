@@ -1,0 +1,26 @@
+{
+  "name": "exercice-r307-seance1",
+  "version": "1.0.0",
+  "description": "R307 seance 1 - exercice en groupe : les commentaires des Ateliers du Bois dans PostgreSQL",
+  "groupe": {
+    "membres": [
+      "",
+      ""
+    ],
+    "depot_github": ""
+  },
+  "private": true,
+  "type": "commonjs",
+  "main": "serveur.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env serveur.js",
+    "dev": "node --watch --env-file-if-exists=.env serveur.js",
+    "reinitialiser": "node scripts/reinitialiser.js",
+    "verifier": "node --env-file-if-exists=.env scripts/verifier.js"
+  },
+  "dependencies": {
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "pg": "8.23.1"
+  }
+}

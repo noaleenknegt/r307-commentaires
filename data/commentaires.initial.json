@@ -1,0 +1,10 @@
+[
+  { "id": 1, "article_id": 1, "nom": "Claire", "texte": "Et pour le robinier, vous conseillez quoi ?", "cree_le": "2026-09-03T08:12:00.000Z" },
+  { "id": 2, "article_id": 1, "nom": "Paul", "texte": "Ma table en pin a tenu deux hivers, pas trois.", "cree_le": "2026-09-04T16:40:00.000Z" },
+  { "id": 3, "article_id": 1, "nom": "Nadia", "texte": "Article clair, merci.", "cree_le": "2026-09-10T06:05:00.000Z" },
+  { "id": 4, "article_id": 2, "nom": "Hugo", "texte": "Le noyer est magnifique. Combien de temps pour le séchage ?", "cree_le": "2026-09-17T10:30:00.000Z" },
+  { "id": 5, "article_id": 2, "nom": "Inès", "texte": "Des photos de la pose seraient les bienvenues.", "cree_le": "2026-09-20T19:15:00.000Z" },
+  { "id": 6, "article_id": 4, "nom": "Lucie", "texte": "J'ai une chaise à faire refaire, vous prenez les commandes ?", "cree_le": "2026-10-09T07:00:00.000Z" },
+  { "id": 7, "article_id": 5, "nom": "Claire", "texte": "Aucune vis visible : comment sont fixés les caissons ?", "cree_le": "2026-10-16T12:22:00.000Z" },
+  { "id": 8, "article_id": 5, "nom": "Karim", "texte": "Superbe travail.", "cree_le": "2026-10-18T17:47:00.000Z" }
+]
