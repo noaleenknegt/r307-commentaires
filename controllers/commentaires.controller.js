@@ -13,9 +13,7 @@ const ErreurHttp = require('../utils/erreur-http');
 function lister(req, res, next){
     const id = Number(req.params.id);
     service.lister(id)
-        .then((commentaires) => {
-            res.json(commentaires);
-        })
+        .then((commentaires) => res.json(commentaires))
         .catch(next);
 }
 
@@ -40,4 +38,11 @@ function parVisiteur(req, res, next){
         .catch(next);
 }
 
-module.exports = {lister, creer, parVisiteur};
+function trouver(req, res, next){
+    const id = Number(req.params.id);
+    service.trouver(id)
+        .then((commentaire) => res.json(commentaire))
+        .catch(next);
+}
+
+module.exports = {lister, creer, parVisiteur, trouver};
