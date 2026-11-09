@@ -45,4 +45,15 @@ function trouver(req, res, next){
         .catch(next);
 }
 
-module.exports = {lister, creer, parVisiteur, trouver};
+function modifier(req, res, next){
+    const id = Number(req.params.id);
+    const {texte} = req.body;
+    if (!texte){
+        return next(new ErreurHttp(400, 'TEXTE_MANQUANT', 'Le champ texte est obligatoire'));
+    }
+    service.modifier(id, {texte})
+        .then((commentaire) => res.status(200).json(commentaire))
+        .catch(next);
+}
+
+module.exports = {lister, creer, parVisiteur, trouver, modifier};
