@@ -56,4 +56,11 @@ function modifier(req, res, next){
         .catch(next);
 }
 
-module.exports = {lister, creer, parVisiteur, trouver, modifier};
+function supprimer(req, res, next){
+    const id = Number(req.params.id);
+    service.supprimer(id)
+        .then(() => res.status(204).end())
+        .catch(next);
+}
+
+module.exports = {lister, creer, parVisiteur, trouver, modifier, supprimer};
