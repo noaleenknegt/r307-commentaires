@@ -19,4 +19,15 @@ function lister(req, res, next){
         .catch(next);
 }
 
-module.exports = {lister};
+function creer(req, res, next){
+    const id = Number(req.params.id);
+    const { nom, texte } = req.body || {};
+    if (!nom || !texte) {
+        return next(new ErreurHttp(400, 'CHAMP_MANQUANT', 'Les champs nom et texte sont obligatoires.'));
+    }
+    service.creer(id, { nom, texte })
+        .then((commentaire) => res.status(201).json(commentaire))
+        .catch(next);
+}
+
+module.exports = {lister, creer};
