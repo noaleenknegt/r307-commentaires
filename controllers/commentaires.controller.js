@@ -30,4 +30,14 @@ function creer(req, res, next){
         .catch(next);
 }
 
-module.exports = {lister, creer};
+function parVisiteur(req, res, next){
+    const nom = req.query.nom;
+    if (!nom) {
+        return next(new ErreurHttp(400, 'NOM_MANQUANT', 'Le parametre nom est obligatoire'));
+    }
+    service.parVisiteur(nom)
+        .then((commentaires) => res.json(commentaires))
+        .catch(next);
+}
+
+module.exports = {lister, creer, parVisiteur};
